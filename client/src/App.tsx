@@ -6,6 +6,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Dashboard from "./pages/Dashboard";
 import CandidateProfile from "./pages/CandidateProfile";
+import InterviewForm from "./pages/InterviewForm";
+import CandidateLists from "./pages/CandidateLists";
+import CandidateOpenInterviews from './pages/CandidateOpenInterviews';
+import CandidateApply from './pages/CandidateApply';
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -20,7 +24,10 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/candidate/:id" element={<CandidateProfile />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/create-interview/" element={<InterviewForm />} />
+          <Route path="/candidate-list/" element={<CandidateLists />} />
+          <Route path="/candidate" element={<CandidateOpenInterviews />} />
+          <Route path="/candidate/apply/:interview_flow_id" element={<CandidateApply />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

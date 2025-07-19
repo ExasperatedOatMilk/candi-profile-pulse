@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@api/ribbon-zogq": "file:.api/apis/ribbon-zogq"
+  }
+}

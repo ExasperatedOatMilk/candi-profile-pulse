@@ -36,6 +36,12 @@ export function Hero() {
             <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
               Watch Demo
             </Button>
+            <Button size="lg" variant="secondary" className="group bg-primary-foreground text-primary hover:bg-primary-foreground/90 shadow-elegant" asChild>
+              <a href="/candidate">
+                Open as Candidate
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </Button>
           </div>
         </div>
 
